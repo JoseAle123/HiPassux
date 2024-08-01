@@ -20,6 +20,8 @@ def create_app(config_class=Config):
     # Configura JWT
     jwt = JWTManager(app)
 
+    jwt = JWTManager(app)
+    
     return app
 
 if __name__ == '__main__':

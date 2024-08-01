@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 db = SQLAlchemy()
 migrate = Migrate()
 
+
 # Aquí podrías inicializar otras extensiones, por ejemplo:
 # from flask_login import LoginManager
 # login_manager = LoginManager()

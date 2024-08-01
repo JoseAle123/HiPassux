@@ -17,6 +17,11 @@ def get_post(post_id):
         return jsonify(post.to_dict())
     return jsonify({'error': error_post}), 404
 
+@post_api.route('/user/<int:user_id>', methods=['GET'])
+def get_post_by_user(user_id):
+    posts = PostService.get_posts_by_user(user_id)
+    return jsonify([post.to_dict() for post in posts])
+
 @post_api.route('/', methods=['POST'])
 def create_post():
     data = request.json
